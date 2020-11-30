@@ -7,8 +7,8 @@ int saturating_add(int x, int y) {
     int x_sign = x >> (w - 1);
     int y_sign = y >> (w - 1);
     int sum_sign = sum >> (w - 1);
-    int pos_overflow = !x_sign && !y_sign && sum_sign;
-    int neg_overflow = x_sign && y_sign && !sum_sign;
+    int pos_overflow = !x_sign && !y_sign && sum_sign; // use logic op, result = 0/1(false or true)
+    int neg_overflow = x_sign && y_sign && !sum_sign; // so replace if statement
     int overflow = pos_overflow || neg_overflow;
     overflow <<= w - 1;
     overflow >>= w - 1;
