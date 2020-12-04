@@ -22,7 +22,7 @@ store_prode:
     mulq %rsi           # %rdx:%rax = x *u y, *u represents 128bit result unsigned mult
 
     addq %rcx, %rdx     # %rdx = (x *u y)_h + ( x_h * y + y_h * x ) = x_h * y_h * 2e128 + ( x_h * y + y_h * x )
-                               = x_h * y + y_h * x. ref 2.18
+                               = x_h * y + y_h * x. ref 2.3.5
 
     movq %rax, (%rdi)   # *dest = (x *u y)_l = x_l * y_l
     movq %rdx, 8(%rdi)  # *(dest + 8) = x_h * y + y_h * x
