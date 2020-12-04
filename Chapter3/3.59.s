@@ -6,8 +6,8 @@
 store_prode:
 
     # %rdi = dest, %rsi = x, %rdx = y
-    # x_i or y_i represent x's or y's ith bit
-    # x_h, x_l, y_h and y_l represent x's or y's high 64bit or low 64bit
+    # x_i or y_i represents x's or y's ith bit
+    # x_h, x_l, y_h and y_l represents x's or y's high 64bit or low 64bit
     # dest + i is byte level add, not int128_t level add
 
     movq %rdx, %rax     # %rax = y
@@ -19,7 +19,7 @@ store_prode:
     imulq %rax, %rcx    # %rcx = x_h * y
     imulq %rsi, %rdx    # %rdx = y_h * x
     addq %rdx, %rcx     # %rcx = x_h * y + y_h * x
-    mulq %rsi           # %rdx:%rax = x *u y, *u represent unsigned mult
+    mulq %rsi           # %rdx:%rax = x *u y, *u represents 128bit result unsigned mult
 
     addq %rcx, %rdx     # %rdx = (x *u y)_h + ( x_h * y + y_h * x ) = x_h * y_h * 2e128 + ( x_h * y + y_h * x )
                                = x_h * y + y_h * x. ref 2.18
