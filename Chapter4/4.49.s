@@ -6,9 +6,6 @@ bubble_bcm1:
 .L5:
 	cmpq	%rsi, %rax               # cmp i - last
 	jnb	.L7                          # if i >= last goto .L7
-	movq	8(%rax), %rdx            # else %rdx = *(i + 1) -> t = *(i + 1)
-	movq	(%rax), %rcx             # %rcx = *i
-	cmpq	%rcx, %rdx               # cmp *(i + 1) - *i
 
     ######################################################
     #                        begin                       #
@@ -17,8 +14,10 @@ bubble_bcm1:
     movq 8(%rax), %r9                # %r9 = *(i + 1)
     movq (%rax), %r10                # %r10 = *i
 
+    movq %r9, %r8                    # %r8 = %r9 = *(i + 1)
     movq %r10, %r11                  # %r11 = %r10 = *i
     xorq %r9, %r10                   # %r10 = *i ^ *(i + 1)
+    cmpq    %r11, %r8                # cmp *(i + 1) - *i
     cmovge %r11, %r9                 # if *(i + 1) >= *i, %r9 = *i
     xorq %r10, %r9                   # %r9 = %r9 ^ %r10 = *(i + 1) or *i ^ *i ^ *(i + 1)
     xorq %r9, %r10                   # %r10 = %r10 ^ %r9 = *i ^ *(i + 1) ^ ( *(i + 1) or *i )
