@@ -11,3 +11,4 @@
 2. [4.48](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.48.s)
 3. [4.49](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.49.s)
 4. [4.50](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.50.s)
+5. [4.51](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.51.md)
