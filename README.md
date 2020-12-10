@@ -10,3 +10,4 @@
 1. [4.47a.c](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.47a.c); [4.47a.s](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.47a.s); [4.47b.c](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.47b.c); [4.47b.s](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.47b.s)
 2. [4.48](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.48.s)
 3. [4.49](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.49.s)
+4. [4.50](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.50.s)
