@@ -14,3 +14,4 @@
 5. [4.51](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter4/4.51.md)
 ## Chapter5
 1. [5.15](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter5/5.15.c)
+2. [5.17](https://github.com/gaoze1998/CSAPP-homework-solutions/blob/main/Chapter5/5.17.c)
